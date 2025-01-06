@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className='shadow-md w-full fixed top-0 left-0 bg-blue-100'>
-      <div className='md:flex items-center justify-between py-4 md:px-10 px-7'>
+      <div className='md:flex items-center justify-between py-2 md:px-10 px-7'>
         <div className='font-bold text-xl cursor-pointer flex items-center text-blue-900'>
           SparkNest
         </div>
