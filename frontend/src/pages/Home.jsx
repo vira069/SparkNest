@@ -44,7 +44,7 @@ const Home = () => {
         <div className="flex flex-wrap justify-center gap-6">
           <Card title="Techies from World " description="The tech world awaits you and your enthuasiam towards the technology!" />
           <Card title="Entrepreneurs" description="Know the worlds innovative minds, that sparks light to your mind and souls !!" />
-          <Card title="Big Gaints of World" description="Know about your dream world gaints that are the reason of your motivations and BIG dreams" />
+          <Card title="World's Big Gaints" description="Know about your dream world gaints that are the reason of your motivations and BIG dreams" />
         </div>
       </section>
       
