@@ -3,11 +3,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./components/Auth/LoginPage.jsx";
 import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home.jsx'
-import Subjects from "./pages/Subjects.jsx";
+// import Subjects from "./pages/Subjects.jsx";
 import Labs from "./pages/Labs.jsx";
 import TestYourSkills from "./pages/TestYourSkills.jsx";
 import AnyDoubt from "./pages/AnyDoubt.jsx";
-import Standard from "./pages/Standard.jsx";
+// import Standard from "./pages/Standard.jsx";
 
 const router =createBrowserRouter([
   {
@@ -19,21 +19,21 @@ const router =createBrowserRouter([
     </div>
     ),
   },
-  {
-    path: "/Standard",
-    element: (
-    <div>
-      <Navbar/>
-      <Standard/>
-      </div>
-    ),
-  },
+  // {
+  //   path: "/Standard",
+  //   element: (
+  //   <div>
+  //     <Navbar/>
+  //     <Standard/>
+  //     </div>
+  //   ),
+  // },
   {
     path: "/Subjects",
     element: (
     <div>
       <Navbar/>
-      <Subjects/>
+      {/* <Subjects/> */}
       </div>
     ),
   },
