@@ -7,8 +7,8 @@ import Card from "../components/Card.jsx";
 
 const Home = () => {
   return (
-    <div className="relative pt-16">
-      <Navbar /> 
+     <div className="relative pt-16">
+      <Navbar />
       
       {/* Hero Section with Background Image */}
       <section 
