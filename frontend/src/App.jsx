@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import Labs from "./pages/Labs.jsx";
 import TestYourSkills from "./pages/TestYourSkills.jsx";
 import AnyDoubt from "./pages/AnyDoubt.jsx";
+import Quiz from "./pages/Quiz.jsx";
 // import Standard from "./pages/Standard.jsx";
 
 const router =createBrowserRouter([
@@ -54,6 +55,15 @@ const router =createBrowserRouter([
       <TestYourSkills/>
     </div>
     ),
+  },
+  {
+    path: "/TestYourSkills/quiz",
+    element:(
+      <div>
+        <Navbar />
+        <Quiz />
+      </div>
+    )
   },
   {
     path: "/Anydoubt",
