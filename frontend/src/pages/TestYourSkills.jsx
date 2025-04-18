@@ -28,10 +28,18 @@ function TestYourSkills() {
   // Fetch questions when quiz starts
   const startQuiz = () => {
     fetch(`http://localhost:5000/api/questions?category=${selectedCategory}`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
       .then((data) => {
         setQuestions(data);
         setQuizStarted(true);
+      })
+      .catch((err) => {
+        console.error("Fetch error:", err);
       });
   };
 
@@ -39,14 +47,37 @@ function TestYourSkills() {
     setAnswers((prev) => ({ ...prev, [qIndex]: option }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     let correct = 0;
     questions.forEach((q, idx) => {
       if (answers[idx] === q.answer) correct++;
     });
+  
     setScore(correct);
     setSubmitted(true);
+  
+    const token = localStorage.getItem("token"); // assuming you stored it during login
+  
+    try {
+      const response = await fetch("http://localhost:5000/api/performance", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          category: selectedCategory,
+          score: correct
+        })
+      });
+  
+      const data = await response.json();
+      console.log("✅ Performance saved:", data);
+    } catch (err) {
+      console.error("❌ Error saving performance:", err);
+    }
   };
+  
 
   const formatTime = (sec) => {
     const m = String(Math.floor(sec / 60)).padStart(2, "0");
