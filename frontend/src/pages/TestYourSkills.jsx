@@ -13,7 +13,7 @@ function TestYourSkills() {
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(600); // 10 minutes
+  const [timeLeft, setTimeLeft] = useState(300); // 10 minutes
 
   // Timer countdown
   useEffect(() => {
@@ -56,7 +56,7 @@ function TestYourSkills() {
     setScore(correct);
     setSubmitted(true);
   
-    const token = localStorage.getItem("token"); // assuming you stored it during login
+    const token = localStorage.getItem("token"); 
   
     try {
       const response = await fetch("http://localhost:5000/api/performance", {
@@ -72,9 +72,9 @@ function TestYourSkills() {
       });
   
       const data = await response.json();
-      console.log("✅ Performance saved:", data);
+      console.log("Performance saved:", data);
     } catch (err) {
-      console.error("❌ Error saving performance:", err);
+      console.error(" Error saving performance:", err);
     }
   };
   
