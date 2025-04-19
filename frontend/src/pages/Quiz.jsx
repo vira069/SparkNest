@@ -61,7 +61,7 @@ const Quiz = () => {
       <Navbar />
       
       <h2>Quiz (API Loaded)</h2>
-      <div>⏳ Time Left: {formatTime(timeLeft)}</div>
+      <div>Time Left: {formatTime(timeLeft)}</div>
       {!submitted ? (
         <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
           {questions.map((q, index) => (
