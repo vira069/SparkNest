@@ -24,10 +24,10 @@ const Footer = () => {
           <a href="https://instagram.com" className="mx-2 text-white hover:text-gray-400">
           <FaInstagram />
           </a>
-          <a href="https://linkedin.com" className="mx-2 text-white hover:text-gray-400">
+          <a href="https://www.linkedin.com/in/ravi-kumar-a542a5260/" className="mx-2 text-white hover:text-gray-400">
           <FaLinkedin />
           </a>
-          <a href="https://github.com" className="mx-2 text-white hover:text-gray-400">
+          <a href="https://github.com/vira069" className="mx-2 text-white hover:text-gray-400">
           <FaGithub />
           </a>
         </div>
